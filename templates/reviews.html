@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Movie Reviews{% endblock %}
+
+{% block content %}
+
+<h1>Movie Reviews</h1>
+
+<p>Write a review for each movie.</p>
+
+
+<form action="{{ url_for('submit_reviews') }}" method="POST">
+
+    <div class="movie-grid">
+
+        {% for movie in movies %}
+
+        <div class="movie-card">
+
+            <div class="poster-frame">
+
+                <img 
+                src="{{ url_for('static', filename=movie.poster) }}"
+                alt="{{ movie.title }} poster">
+
+            </div>
+
+
+            <div class="movie-card-body">
+
+                <h3>{{ movie.title }}</h3>
+
+
+                <textarea
+                name="review_{{ movie.title.replace(' ', '_') }}"
+                placeholder="Write your review..."
+                required></textarea>
+
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+
+    <div class="submit-row">
+
+        <button type="submit" class="btn">
+            Submit Reviews
+        </button>
+
+    </div>
+
+</form>
+
+
+{% endblock %}

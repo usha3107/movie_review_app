@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Results{% endblock %}
+
+{% block content %}
+
+<div class="page-heading">
+
+
+<h1>Review Results</h1>
+
+<p>Sentiment analysis of all submitted reviews.</p>
+
+
+</div>
+
+<div class="results-summary">
+
+
+<div class="stat-card stat-positive">
+    <div class="num">{{ totals.Positive }}</div>
+    <div class="lbl">Positive</div>
+</div>
+
+
+<div class="stat-card stat-neutral">
+    <div class="num">{{ totals.Neutral }}</div>
+    <div class="lbl">Neutral</div>
+</div>
+
+
+<div class="stat-card stat-negative">
+    <div class="num">{{ totals.Negative }}</div>
+    <div class="lbl">Negative</div>
+</div>
+
+
+</div>
+
+
+
+
+{% endblock %}
