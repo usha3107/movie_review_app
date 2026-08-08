@@ -4,12 +4,11 @@
 
 {% block content %}
 
-<h1>Movie Reviews</h1>
+<h2>Movie Reviews</h2>
 
 <p>Write a review for each movie.</p>
 
-
-<form action="{{ url_for('submit_reviews') }}" method="POST">
+<form method="POST">
 
     <div class="movie-grid">
 
@@ -17,25 +16,26 @@
 
         <div class="movie-card">
 
+            <!-- Movie Poster -->
             <div class="poster-frame">
 
-                <img 
-                src="{{ url_for('static', filename=movie.poster) }}"
-                alt="{{ movie.title }} poster">
+                <img
+                    src="{{ url_for('static', filename='posters/' + movie.poster) }}"
+                    alt="{{ movie.title }} poster"
+                >
 
             </div>
 
-
+            <!-- Movie Details -->
             <div class="movie-card-body">
 
                 <h3>{{ movie.title }}</h3>
 
-
                 <textarea
-                name="review_{{ movie.title.replace(' ', '_') }}"
-                placeholder="Write your review..."
-                required></textarea>
-
+                    name="review_{{ movie.title.replace(' ', '_') }}"
+                    placeholder="Write your review..."
+                    required
+                ></textarea>
 
             </div>
 
@@ -45,7 +45,7 @@
 
     </div>
 
-
+    <!-- Submit Button -->
     <div class="submit-row">
 
         <button type="submit" class="btn">
@@ -55,6 +55,5 @@
     </div>
 
 </form>
-
 
 {% endblock %}

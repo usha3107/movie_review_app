@@ -1,20 +1,14 @@
 [
     {
-        "slug": "srimanthudu",
         "title": "Srimanthudu",
-        "genre": "ACTION",
-        "poster": "posters/srimanthudu.jpg"
+        "poster": "srimanthudu.jpg"
     },
     {
-        "slug": "pushpa_2",
-        "title": "Pushpa 2",
-        "genre": "ACTION",
-        "poster": "posters/pushpa_2.jpg"
-    },
-    {
-        "slug": "waltair_veerayya",
         "title": "Waltair Veerayya",
-        "genre": "ACTION",
-        "poster": "posters/waltair_veerayya.jpg"
+        "poster": "WaltairVeerayya.jpg"
+    },
+    {
+        "title": "Pushpa 2",
+        "poster": "pushpa2.jpg"
     }
 ]
